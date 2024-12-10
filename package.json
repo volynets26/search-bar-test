@@ -6,6 +6,9 @@
   "scripts": {
     "start": "harp server --port $PORT"
   },
+  "dependencies": {
+    "harp": "*"
+  },
   "author": "",
   "license": "ISC"
 }
