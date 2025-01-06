@@ -3,108 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marathon Countdown</title>
+    <title>Sacramento Running Association</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="assets/images/logo.png" alt="Logo">
-        <span>Pittsburgh Marathon</span>
+<header class="header">
+    <div class="header-container">
+        <div class="header-logo">
+            <img src="assets/images/cim-header-logo.png" alt="Sacramento Running Association Logo" class="logo">
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="#" class="menu-link">Events</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Community</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Sport Development</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">SRA Kids</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav>
-        <a href="#">Volunteer</a>
-        <a href="#">Blog</a>
-        <a href="#">Partners</a>
-        <a href="#">News</a>
-        <a href="#">FAQs</a>
-        <a href="#">VIP</a>
-    </nav>
+    <div class="banner-container">
+        <img src="assets/images/cim-banner.png" alt="Sacramento Running Association Banner" class="banner" />
+    </div>
+
+    <div class="ai-search-bar">
+        <search-bar event='17a9934d-34a2-4b66-9ed8-225a4bff6e30'></search-bar>
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <div class="text-center">
+                <h2>
+                    Sacramento Running Association
+                </h2>
+                <h4>
+                    Inspiring Achievement Step by Step
+                </h4>
+            </div>
+            <div class="description">
+                <p>
+                    The Sacramento Running Association (SRA) is a community-based non-profit that promotes the sport of running in the greater Sacramento area. The SRA spends over $1 million annually to manage events and programs to benefit local runners of all ages and abilities.
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="events">
+        <h2>Our Events</h2>
+        <div class="event-grid">
+            <div class="event-card">
+                <h3 class="event-title">California International Marathon</h3>
+                <p>The Fastest Course in the West!<br>#1 Boston Qualifier ◉ Top-10 Largest US Marathon ◉ Gentle Rolling Hills with a Flat, Fast Finish</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+            <div class="event-card">
+                <h3 class="event-title">In-Shape Family Fitness CIM Relay</h3>
+                <p>Grab your best friend and experience CIM weekend together! The CIM Relay offers 2-person teams the opportunity to take part in the full marathon course.</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+            <div class="event-card">
+                <h3 class="event-title">Credit Union SACTOWN Run</h3>
+                <p>The Credit Union for Kids and Sacramento Running Association has raised nearly $2 million for Children's Miracle Network Hospitals.</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+            <div class="event-card">
+                <h3 class="event-title">Run The Parkway</h3>
+                <p>The American River Parkway Foundation and the SRA are proud to partner to present Run the Parkway, and the Official Training Run of the California International Marathon.</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+            <div class="event-card">
+                <h3 class="event-title">Youth Cross Country Series</h3>
+                <p>The SRA conducts a Fall Youth XC series to provide competitive opportunities for local youth runners, and expose them to the fun of XC.</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+        </div>
+    </section>
 </header>
-
-<div class="banner">
-    <div class="banner-content">
-        <h1>2025 DICK'S Sporting Goods Pittsburgh Marathon</h1>
-        <h2>May 4, 2025</h2>
-        <div class="countdown" id="countdown">
-        </div>
-    </div>
-</div>
-
-<div class="ai-search-bar">
-    <search-bar event='c2c5b8a3-12ce-4ed6-9f49-30f2217cfa39'></search-bar>
-</div>
-
-<!-- Events Section -->
-<section class="events-section">
-    <h2>Unleash your inner champion</h2>
-    <p>Beyond the finish line: embark on a journey of personal transformation</p>
-    <div class="events">
-        <div class="event-card">
-            <img src="assets/images/marathon.png" alt="Marathon">
-            <div class="event-details">
-                <h3>Marathon</h3>
-                <p>SUN, MAY 4, 2025</p>
-                <p>START @ 7:00AM</p>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="assets/images/half-marathon.png" alt="Half Marathon">
-            <div class="event-details">
-                <h3>Half Marathon</h3>
-                <p>SUN, MAY 4, 2025</p>
-                <p>START @ 7:00AM</p>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="assets/images/relay.png" alt="Marathon Relay">
-            <div class="event-details">
-                <h3>Marathon Relay</h3>
-                <p>SUN, MAY 4, 2025</p>
-                <p>START @ 7:00AM</p>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="assets/images/fitness-challange.png" alt="4-Mile Fitness Challenge">
-            <div class="event-details">
-                <h3>4-Mile Fitness Challenge</h3>
-                <p>SUN, MAY 4, 2025</p>
-                <p>START @ 9:30AM</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-  const countdownElement = document.getElementById('countdown');
-  const eventDate = new Date('2025-05-04T00:00:00');
-
-  function updateCountdown() {
-    const now = new Date();
-    const diff = eventDate - now;
-
-    if (diff <= 0) {
-      countdownElement.innerHTML = '<div>Event Started!</div>';
-      return;
-    }
-
-    const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24)) % 30;
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    countdownElement.innerHTML = `
-                <div><span>${months}</span>Months</div>
-                <div><span>${days}</span>Days</div>
-                <div><span>${hours}</span>Hours</div>
-                <div><span>${minutes}</span>Minutes</div>
-                <div><span>${seconds}</span>Seconds</div>
-            `;
-  }
-
-  setInterval(updateCountdown, 1000);
-</script>
 <script type="module" src="https://ai-staging.neurun.com/polyfills.js"></script>
 <script type="module" src="https://ai-staging.neurun.com/main.js"></script>
 </body>
