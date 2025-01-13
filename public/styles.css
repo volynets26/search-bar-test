@@ -1,306 +1,259 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-}
-
-.header-logo .logo {
-    max-height: 50px;
-}
-
-
-.menu {
-    margin: 20px 0;
-    padding-top: 10px;
-}
-
-.menu-list {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-}
-
-.menu-item {}
-
-.menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.menu-link:hover {
-    color: #005f6b;
-}
-
-.menu-list .menu-item {
-    position: relative;
-}
-
-.menu-item:hover .submenu {
-    display: block;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 10px;
-    list-style: none;
-}
-
-.submenu-item {
-    margin: 5px 0;
-}
-
-.submenu-link {
-    text-decoration: none;
-    color: #333;
+body {
+    line-height: 1.6;
+    background: #014b67;
+    font-family: Open Sans, Noto Sans JP, Noto Sans Thai, sans-serif;
     font-size: 14px;
 }
 
-.submenu-link:hover {
-    color: #005f6b;
-}
-
-.banner-container {
-    text-align: center;
+hr {
+    border: 0;
+    border-top: 1px solid #dddde6;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
-.banner {
-    max-width: 100%;
-    height: auto;
+.header {
+    background-color: white;
+    padding: 10px 20px;
 }
 
-.content-container {
+.header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
 }
 
-.content {
-    max-width: 1080px;
-}
-
-.text-center h2 {
-    font-size: 2rem;
-}
-
-.text-center h4 {
-    font-size: 1.2rem;
-}
-
-.description {
-    margin-top: 20px;
-    color: #3F3F3F;
-    font-weight: 100;
-}
-
-.description p {
-    line-height: 1.6;
-}
-
-
-h1, h2, h3, h4, h5 {
-    color: #005169;
-    margin: 8px;
+.header .nav a {
+    color: #1a1a1a;
+    margin-left: 15px;
+    text-decoration: none;
 }
 
 .banner {
+    background: url('assets/images/race-rooster-banner.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    height: 290px;
+}
+
+.page-banner__content {
+    background-color: rgba(0, 75, 103, 0.75);
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 15px;
     width: 100%;
 }
 
-.events {
-    background-color: #e7e7e7;
-    padding: 40px 20px;
-}
-
-.events h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #003b5c;
-    font-size: 1.8rem;
-}
-
-.event-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.event-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #004d67;
-    color: white;
-    padding: 20px;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.event-card h3 {
-    font-size: 1.5rem;
+.banner h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.event-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    flex-grow: 1;
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 16px;
+    background: #014b67;
 }
 
-.details-button {
-    background-color: transparent;
-    color: #FFFFFF;
+/* Sidebar Menu Styles */
+.sidebar-menu {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Take full width on small screens */
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    border-top: 1px solid #eee;
+}
+
+.menu-list li:first-child {
+    border-top: none;
+}
+
+.menu-list li a {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
+    color: #333;
+    display: block;
+    padding: 10px 8px;
+    font-size: 16px;
+}
+
+.menu-list li a:hover {
+    background-color: #f2f2f2;
+}
+
+.main-content {
+    flex: 3;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    width: 100%; /* Make it responsive */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* Ensure content wraps properly */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack items on mobile */
+    }
+
+    .main-content {
+        width: 100%; /* Ensure it takes full width of the screen */
+        margin: 0 auto; /* Center it if needed */
+    }
+
+    .sidebar-menu,
+    .right-panel {
+        width: 100%; /* Ensure full width for these elements too */
+    }
+}
+
+/* Right Panel */
+.right-panel {
+    background-color: #fff;
+    padding: 15px;
+    flex: 1; /* Allow flexibility */
+    color: #063855;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.buttons-section .btn {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.register-btn {
+    background-color: #ffd700;
+    color: #333;
     font-weight: bold;
-    font-size: 0.9rem;
-    border: 2px solid white;
-    transition: all 0.3s ease;
-    align-self: center;
 }
 
-.details-button:hover {
-    background-color: transparent;
+.access-code-btn,
+.store-btn,
+.transfer-btn,
+.donate-btn {
+    background-color: #003b64;
     color: white;
-    border-color: white;
+    font-weight: bold;
 }
 
-.event-title {
-    color: #FFFFFF;
+.event-details {
+    font-size: 14px;
+    text-align: left;
 }
 
-/* General responsiveness */
+.event-date,
+.event-website {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.event-details a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.event-details a:hover {
+    text-decoration: underline;
+}
+
+.social-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.facebook-btn,
+.share-btn {
+    background-color: #3b5998;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.facebook-btn {
+    background-color: #1877f2;
+}
+
+.share-btn {
+    background-color: #1a1a1a;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}
+
+.ai-search-bar {
+    width: auto;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column; /* Stack the logo and menu vertically */
-        align-items: center;
-    }
-
-    .menu-list {
-        /*flex-direction: column; !* Stack menu items vertically *!*/
-        gap: 15px; /* Reduce gap between menu items */
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .banner {
-        margin-top: 10px;
-        max-height: 200px; /* Limit banner height for smaller screens */
+        padding: 20px;
+        height: auto;
     }
 
-    .content-container {
-        padding: 15px; /* Reduce padding */
+    .main-container {
+        flex-direction: column;
+        margin: 0;
+        gap: 0;
     }
 
-    .text-center h2 {
-        font-size: 1.5rem; /* Reduce font size */
+    .sidebar-menu {
+        margin-bottom: 16px;
     }
 
-    .text-center h4 {
-        font-size: 1rem;
+    .main-content {
+        order: 1;
+        margin-bottom: 16px;
     }
 
-    .description p {
-        font-size: 0.9rem; /* Adjust paragraph font size */
-    }
-}
-
-/* Events section responsiveness */
-@media (max-width: 768px) {
-    .event-grid {
-        grid-template-columns: 1fr; /* Stack cards in a single column */
-        gap: 15px; /* Reduce gap between cards */
-    }
-
-    .event-card {
-        padding: 15px; /* Reduce padding */
-        border-radius: 20px; /* Adjust border radius */
-    }
-
-    .event-card h3 {
-        font-size: 1.2rem; /* Reduce font size */
-    }
-
-    .event-card p {
-        font-size: 0.85rem; /* Adjust paragraph font size */
-    }
-
-    .details-button {
-        padding: 8px 15px; /* Reduce button size */
-        font-size: 0.8rem; /* Adjust font size */
-    }
-
-    .logo {
-        width: 100%;
-    }
-}
-
-/* For very small devices */
-@media (max-width: 480px) {
-    .header-logo .logo {
-        max-height: 40px; /* Reduce logo size */
-    }
-
-    .menu-link {
-        font-size: 14px; /* Adjust menu link font size */
-    }
-
-    .banner {
-        max-height: 150px; /* Further limit banner height */
-    }
-
-    .content-container {
-        padding: 10px;
-    }
-
-    .text-center h2 {
-        font-size: 1.2rem;
-    }
-
-    .text-center h4 {
-        font-size: 0.9rem;
-    }
-
-    .description p {
-        font-size: 0.8rem;
-    }
-
-    .details-button {
-        padding: 6px 10px;
-        font-size: 0.75rem;
-    }
-
-    .logo {
+    .right-panel {
+        order: 2;
         width: 100%;
     }
 }
